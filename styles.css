@@ -1,0 +1,225 @@
+/* Resetting and body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1e1e1e, #3a3a3a);
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    height: 100vh;            /* Preenche a tela */
+    color: #e0e0e0;
+}
+
+/* Container holding everything */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;  /* Limita a largura total para se ajustar a telas maiores */
+}
+
+/* Profile card style */
+.profile-card {
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: auto; /* Alonga a card para um formato mais retangular */
+    transition: transform 0.3s;
+    margin-bottom: 40px;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+/* Profile image style */
+.profile-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #666;
+    margin-bottom: 15px;
+}
+
+/* Role text style */
+.role {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Description text style */
+.description {
+    color: #aaa;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* Social media links (icons) style */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 32px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon.instagram {
+    color: #e4405f;
+}
+
+.social-icon.linkedin {
+    color: #0077b5;
+}
+
+.social-icon.github {
+    color: #ffffff;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+/* Social media buttons style */
+.social-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background: none;
+    border: 2px solid;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn.instagram {
+    border-color: #e4405f;
+    color: #e4405f;
+}
+
+.btn.linkedin {
+    border-color: #0077b5;
+    color: #0077b5;
+}
+
+.btn.github {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Portfolio section style */
+.portfolio-section {
+    margin-top: 40px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Project card style */
+.project-card {
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-icon {
+        font-size: 28px;
+    }
+
+    .social-buttons .btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .profile-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .role, .description {
+        font-size: 14px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icon {
+        font-size: 24px;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
